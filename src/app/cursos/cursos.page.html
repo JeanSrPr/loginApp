@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Materias</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <h2>Materias</h2>
+
+    <!-- Lista con secciones expandibles -->
+    <ion-accordion-group>
+      <ion-accordion>
+        <ion-item slot="header" button>
+          <ion-label>Machine Learning</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p>Contenido relacionado con Machine Learning.</p>
+        </div>
+      </ion-accordion>
+
+      <ion-accordion>
+        <ion-item slot="header" button>
+          <ion-label>Aplicaciones Móviles</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p>Contenido relacionado con Aplicaciones Móviles.</p>
+        </div>
+      </ion-accordion>
+
+      <ion-accordion>
+        <ion-item slot="header" button>
+          <ion-label>Inteligencia de Negocios</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p>Contenido relacionado con Inteligencia de Negocios.</p>
+        </div>
+      </ion-accordion>
+
+      <ion-accordion>
+        <ion-item slot="header" button>
+          <ion-label>Gestión de Proyectos</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p>Contenido relacionado con Gestión de Proyectos.</p>
+        </div>
+      </ion-accordion>
+
+      <ion-accordion>
+        <ion-item slot="header" button>
+          <ion-label>Ética Profesional</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p>Contenido relacionado con Ética Profesional.</p>
+        </div>
+      </ion-accordion>
+
+      <ion-accordion>
+        <ion-item slot="header" button>
+          <ion-label>Portafolio</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <p>Contenido relacionado con Portafolio.</p>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-card>
+</ion-content>

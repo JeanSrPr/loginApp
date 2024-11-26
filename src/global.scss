@@ -35,3 +35,60 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+:root {
+    --ion-color-primary: #307FE2; /* Azul principal */
+    --ion-color-secondary: #8BB8E8; /* Azul claro */
+    --ion-color-dark: #1A1A1A; /* Negro oscuro */
+    --ion-color-light: #FFFFFF; /* Blanco */
+    --ion-color-medium: #666666; /* Gris */
+    --ion-color-warning: #FFB800; /* Amarillo */
+    --neutral-color: #666666; /* Gris */
+    --text-color: #EEEEEE; /* Texto claro */
+    --border-radius: 10px; /* Bordes redondeados generales */
+  }
+  
+  /* Ajuste de tarjetas */
+  ion-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  body {
+    background-color: var(--color-fondo-dark); /* Fondo negro */
+    color: var(--text-color);
+    color: var(--color-blanco); /* Texto blanco */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Encabezados */
+  ion-header, ion-toolbar {
+    background-color: var(--color-primario); /* Azul */
+    color: var(--color-texto-invertido); /* Blanco */
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Botones */
+  ion-button {
+    --background: var(--color-amarillo); /* Amarillo */
+    --color: var(--color-negro); /* Texto negro */
+    --border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  /* Botón flotante */
+  ion-fab-button {
+    --background: var(--color-secundario); /* Azul claro */
+    --color: var(--color-blanco); /* Blanco */
+  }
+  
+  /* Tarjetas */
+  ion-card {
+    border-radius: var(--border-radius);
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+  }
+  
+  button, ion-button {
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }

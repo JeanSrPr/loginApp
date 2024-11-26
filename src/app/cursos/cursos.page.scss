@@ -1,0 +1,26 @@
+h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #ffffff; /* Texto blanco */
+}
+
+ion-card {
+  background-color: #1a1a1a; /* Fondo negro */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+ion-item {
+  --background: #666666; /* Fondo gris */
+  --color: #ffffff; /* Texto blanco */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+ion-accordion {
+  --background: #666666; /* Fondo gris para encabezados */
+  --color: #ffffff; /* Texto blanco */
+}

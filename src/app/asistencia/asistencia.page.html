@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Sección para el usuario tipo 'profesor' -->
+  <ion-card *ngIf="tipoUsuario === 'profesor'">
+    <ion-card-header>
+      <ion-card-title>Código QR</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngIf="mostrarQR" class="qr-container">
+        <img src="assets/icon/QRprofe.png" alt="Código QR" />
+      </div>
+      <ion-button expand="block" (click)="toggleQR()">Generar/Ocultar QR</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Sección para el usuario tipo 'alumno' -->
+  <ion-card *ngIf="tipoUsuario === 'alumno'">
+    <ion-card-header>
+      <ion-card-title>Escaneo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="scan-result" *ngIf="scannedData">
+        <h3 style="color: #000;">Resultado del Escaneo:</h3>
+        <p style="color: #000;">{{ scannedData }}</p>
+      </div>
+      <ion-button expand="block" (click)="toggleScan()">Escanear QR</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- Botón y lista de asistencias visible solo para profesores -->
+<ng-container *ngIf="tipoUsuario === 'profesor'">
+  <!-- Botón para mostrar/ocultar asistencias -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <ion-button expand="block" (click)="toggleAsistencias()">
+          {{ mostrarAsistencias ? 'Ocultar' : 'Mostrar' }} Asistencias
+        </ion-button>
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- Lista de asistencias desplegable -->
+  <ion-card *ngIf="mostrarAsistencias">
+    <ion-card-header>
+      <ion-card-title>Registros</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <!-- Botones adicionales dentro del despliegue -->
+        <ion-item lines="none">
+          <ion-button expand="block" (click)="refrescarAsistencias()">Refrescar</ion-button>
+          <ion-button expand="block" color="danger" (click)="limpiarAsistencias()">Limpiar</ion-button>
+        </ion-item>
+        <!-- Iterar sobre las asistencias -->
+        <ion-item *ngFor="let asistencia of asistencias">
+          <ion-label>
+            <h2>{{ asistencia.usuario }}</h2>
+            <p>{{ asistencia.fecha_hora }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Mensaje para cuando no hay asistencias registradas -->
+  <div *ngIf="mostrarAsistencias && asistencias.length === 0" style="text-align: center; margin-top: 20px;">
+    <p>No hay asistencias registradas.</p>
+  </div>
+</ng-container>
+
+</ion-content>

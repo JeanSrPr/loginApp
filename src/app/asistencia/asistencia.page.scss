@@ -1,0 +1,91 @@
+ion-fab-button {
+    --background: #3880ff; /* Color del fondo del botón */
+    --color: white; /* Color del ícono */
+  }
+.profesor-section,
+.alumno-section {
+  margin-top: 20px;
+}
+
+.qr-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.scan-result {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.instruction {
+  margin: 20px 0;
+  text-align: center;
+  color: #666;
+}
+.text-primary {
+  color: var(--color-primario);
+}
+
+.text-secondary {
+  color: var(--color-secundario);
+}
+
+.qr-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+ion-button {
+  --background: var(--color-amarillo);
+  --color: var(--color-negro);
+  font-weight: bold;
+}
+
+ion-fab-button {
+  --background: var(--color-secundario);
+  --color: var(--color-blanco);
+}
+
+ion-content {
+  background-color: var(--color-fondo);
+}
+
+
+
+
+
+.page-asistencia {
+  ion-header {
+    --background: var(--primary-color);
+    --color: var(--light-color);
+  }
+
+  .scan-result {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+  }
+
+  ion-fab-button {
+    background-color: var(--accent-color);
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    --border-radius: 50%;
+
+    ion-icon {
+      color: var(--light-color);
+      font-size: 24px;
+    }
+  }
+}
